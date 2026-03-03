@@ -74,7 +74,7 @@ export default function LoginScreen() {
                 behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
                 style={styles.keyboardView}
             >
-                <View style={[styles.content, isLargeScreen && { maxWidth: 450, alignSelf: 'center', width: '100%' }]}>
+                <View style={[styles.content, isLargeScreen && { maxWidth: 450, alignSelf: 'center', width: '100%', paddingVertical: 40 }]}>
                     <Image source={require('@/assets/images/logo.png')} style={styles.logo} />
                     <Text style={styles.tagline}>Fresh Meat, Delivered.</Text>
 
@@ -153,6 +153,7 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
         alignSelf: 'center',
         marginBottom: 20,
+        marginTop: 20,
     },
     tagline: {
         fontSize: 16,

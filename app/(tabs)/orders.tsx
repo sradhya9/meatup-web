@@ -64,7 +64,7 @@ export default function OrdersScreen() {
 
   // Custom Header
   const renderHeader = () => (
-    <View style={[styles.headerBg, { paddingTop: insets.top }]}>
+    <View style={[styles.headerBg, { paddingTop: insets.top + 20 }]}>
       <View style={[styles.headerContent, { maxWidth: contentMaxWidth, alignSelf: 'center', width: '100%' }]}>
         <Text style={styles.headerTitle}>My Orders</Text>
         <TouchableOpacity onPress={handleSupportPress} style={styles.supportButton}>
@@ -96,7 +96,13 @@ export default function OrdersScreen() {
       {renderHeader()}
       <ScrollView
         style={styles.scrollView}
-        contentContainerStyle={[styles.scrollContent, { maxWidth: contentMaxWidth, alignSelf: 'center', width: '100%' }]}
+        contentContainerStyle={[styles.scrollContent, {
+          maxWidth: contentMaxWidth,
+          alignSelf: 'center',
+          width: '100%',
+          paddingTop: 24,
+          paddingBottom: 100
+        }]}
         showsVerticalScrollIndicator={false}
       >
         <View style={[styles.ordersList, isTablet && styles.rowGrid]}>

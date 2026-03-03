@@ -287,7 +287,7 @@ export default function CheckoutScreen() {
       <Stack.Screen options={{ headerShown: false }} />
 
       {/* 1. Custom Header matching Profile.tsx */}
-      <View style={[styles.headerBg, { paddingTop: insets.top }]}>
+      <View style={[styles.headerBg, { paddingTop: insets.top + 20 }]}>
         <View style={styles.headerTopRow}>
           <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
             <ChevronLeft size={28} color={Colors.cream} />
@@ -650,7 +650,8 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     padding: 20,
-    paddingTop: 30, // Spacing from header
+    paddingTop: 24,
+    paddingBottom: 120,
   },
   largeScreenContent: {
     maxWidth: 1200,

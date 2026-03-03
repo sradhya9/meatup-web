@@ -136,7 +136,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       {/* 1. Custom Header with Search */}
-      <View style={[styles.headerBg, { paddingTop: insets.top }]}>
+      <View style={[styles.headerBg, { paddingTop: insets.top + 20 }]}>
         <View style={{ maxWidth: contentMaxWidth, alignSelf: 'center', width: '100%' }}>
           <View style={styles.headerTopRow}>
             <Text style={styles.logo}>Meat Up</Text>
@@ -475,6 +475,9 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingTop: 40, // Space for header overlap
+    paddingBottom: 120,
+    alignSelf: 'center',
+    width: '100%',
   },
 
   // Ticker

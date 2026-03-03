@@ -98,7 +98,7 @@ export default function SignupScreen() {
                 <ScrollView
                     contentContainerStyle={[
                         styles.scrollContent,
-                        isLargeScreen && { maxWidth: 450, alignSelf: 'center', width: '100%' }
+                        isLargeScreen && { maxWidth: 450, alignSelf: 'center', width: '100%', paddingVertical: 40 }
                     ]}
                     showsVerticalScrollIndicator={false}
                 >

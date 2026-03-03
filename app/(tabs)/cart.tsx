@@ -31,7 +31,7 @@ export default function CartScreen() {
 
   // Custom Header Component
   const renderHeader = () => (
-    <View style={[styles.headerBg, { paddingTop: insets.top }]}>
+    <View style={[styles.headerBg, { paddingTop: insets.top + 20 }]}>
       <View style={[styles.headerContent, { maxWidth: contentMaxWidth, alignSelf: 'center', width: '100%' }]}>
         <Text style={styles.headerTitle}>My Cart</Text>
         <View style={styles.headerBadge}>
