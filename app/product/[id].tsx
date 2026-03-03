@@ -34,6 +34,7 @@ export default function ProductDetailScreen() {
     );
   }
 
+
   const priceColor =
     product.price_direction === 'up'
       ? Colors.priceUp
