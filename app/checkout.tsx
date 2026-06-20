@@ -58,8 +58,8 @@ export default function CheckoutScreen() {
   const platformFeeAmount = cartTotal * platformFeeRate;
 
   // Delivery Charge Calculation
-  const freeDistance = 7;
-  const ratePerKm = 5;
+  const freeDistance = 1;
+  const ratePerKm = 6;
   let deliveryCharge = 0;
 
   if (deliveryDistance && deliveryDistance > freeDistance) {
