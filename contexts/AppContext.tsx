@@ -216,8 +216,9 @@ export const [AppProvider, useApp] = createContextHook(() => {
             if (variant) itemPrice = variant.price;
           }
 
-          const isKgUnit = item.product.unit?.toLowerCase() === 'kg';
-          const effectivePrice = isKgUnit ? itemPrice * item.weight : itemPrice;
+          // Align with subtotal calculation: for both weight (kg) and quantity (PC/pack),
+          // 'item.weight' stores the multiplier (weight or PC count) for the base price.
+          const effectivePrice = itemPrice * item.weight;
 
           return {
             product_id: item.product.id,
