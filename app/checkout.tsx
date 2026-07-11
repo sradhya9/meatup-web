@@ -92,7 +92,6 @@ export default function CheckoutScreen() {
       setIsSavingAddress(false);
     }
   };
-
   useEffect(() => {
     // Attempt to get location on mount if address is empty or just to check
     getCurrentLocation();
@@ -236,7 +235,7 @@ export default function CheckoutScreen() {
       }
 
       const { lat, lon } = coords;
-      
+
       // Use Google Maps for real road distance if possible
       const googleData = await getGoogleMapsDistance(
         lat,
