@@ -292,6 +292,16 @@ export default function CheckoutScreen() {
       return;
     }
 
+    if (locationLoading) {
+      Alert.alert('Please Wait', 'We are calculating delivery charges for your address.');
+      return;
+    }
+
+    if (locationError || deliveryDistance === null) {
+      Alert.alert('Delivery Unavailable', locationError || 'Please wait for delivery calculation to complete or check your address.');
+      return;
+    }
+
     const slotString = deliveryTime
       ? `Within ${deliveryTime} mins`
       : 'Standard Delivery';
